@@ -424,7 +424,7 @@ section h2 {
   .chat .popout-btn { display: none !important; }
 }
 
-/* SLIDESHOW ENLARGEMENT */
+/* SLIDESHOW: enlarge by 20% and teal border */
 #slideshow {
   transform: scale(1.2);
   transform-origin: center center;
@@ -433,18 +433,26 @@ section h2 {
   margin: 0 auto;
 }
 
-/* CENTER CHAT POP-OUT BUTTON */
+/* CENTER Pop-Out Chat button */
 .chat-actions {
   text-align: center;
 }
 .chat-actions .popout-btn {
-  margin: 0 auto;
   display: inline-block;
+  margin: 0 auto;
 }
 
-/* DESKTOP LOGO SIZE INCREASE */
+/* DESKTOP: increase header logo size by 50% */
 @media (min-width: 900px) {
   header .logo {
-    height: 120px;
+    height: 120px !important;
+  }
+}
+
+/* MOBILE OVERRIDE: show chat pop-out button beneath chat */
+@media (max-width: 768px) {
+  .popout-btn {
+    display: inline-block !important;
+    margin: 0.5rem auto !important;
   }
 }
